@@ -6,10 +6,9 @@ from functools import reduce
 import re
 from common import TYPES, texts, calls
 
+
 '''
-order:
-    - space:
-    - time:
+order: O(4)
 '''
 def every_unique_number_on_texts(acc, x):
     if not x[0] in acc and not x[1] in acc: return [*acc, x[0], x[1]] 
@@ -17,26 +16,23 @@ def every_unique_number_on_texts(acc, x):
     if x[1] not in acc: return [*acc, x[1]]
     return acc
 
+
 '''
-order:
-    - space:
-    - time:
+order: O(1)
 '''
 def by_parsed_phone(phone): return ''.join(re.findall(r"(\d+)", phone))
 
+
 '''
-order:
-    - space:
-    - time:
+order: O(3)
 '''
 def by_parsed_phone_led_by_zero(phone):
     parsed_phone = by_parsed_phone(phone)
     return int('1{}'.format(parsed_phone)) if parsed_phone.startswith('0') else int(parsed_phone)
 
+
 '''
-order:
-    - space:
-    - time:
+order: O(6n+1)
 '''
 def possible_telemarketers_triage(calls, texts):
     unique_text_numbers = reduce(every_unique_number_on_texts, texts, [])

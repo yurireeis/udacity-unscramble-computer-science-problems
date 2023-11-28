@@ -10,9 +10,7 @@ records = texts + calls
 
 
 '''
-order:
-    - space:
-    - time:
+order: O(2n+5)
 '''
 def evaluate_repeated_numbers(acc, x):
     incoming, answering = x[:2]
@@ -24,9 +22,7 @@ def evaluate_repeated_numbers(acc, x):
     return acc
 
 '''
-order:
-    - space:
-    - time:
+order: O(n)
 '''
 def get_unique_phone_numbers(records):
     return reduce(evaluate_repeated_numbers, records, [])

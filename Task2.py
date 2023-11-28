@@ -6,20 +6,16 @@ from functools import reduce
 from datetime import datetime
 from common import calls
 
+
 '''
-order:
-    - space:
-    - time:
+order: O(3)
 '''
 def evaluate_previous_and_next_calls(acc, x):
     incoming, answering, incoming_date, duration = x
-    if not acc or acc[-1] < duration: return incoming, duration, datetime.strptime(incoming_date, "%d-%m-%Y %H:%M:%S").strftime("%B, %Y")
-    return acc
+    return incoming, duration, datetime.strptime(incoming_date, "%d-%m-%Y %H:%M:%S").strftime("%B, %Y") if not acc or acc[-1] < duration else acc
 
 '''
-order:
-    - space:
-    - time:
+order: O(n)
 '''
 def get_longer_call_phone_number_and_duration(records):
     return reduce(evaluate_previous_and_next_calls, records, None)

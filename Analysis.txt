@@ -1,77 +1,31 @@
 TASK 0:
 
-    * get_first_and_last_items(items):
-        > space:
-        > time:
-
-    * show_record_message_with_incoming_answering_and_time(record, message):
-        > space:
-        > time:
+    * get_first_and_last_items(items): O(1)
+    * show_record_message_with_incoming_answering_and_time(record, message): O(1)
 
 TASK 1:
 
-    * evaluate_repeated_numbers(acc, x):
-        > space:
-        > time:
-
-    * get_unique_phone_numbers(records):
-        > space:
-        > time:
+    * evaluate_repeated_numbers(acc, x): O(2n+5)
+    * get_unique_phone_numbers(records): O(n)
 
 TASK 2:
 
-    * evaluate_previous_and_next_calls(acc, x):
-        > space:
-        > time:
-
-    * get_longer_call_phone_number_and_duration(records):
-        > space:
-        > time:
+    * evaluate_previous_and_next_calls(acc, x): O(3)
+    * get_longer_call_phone_number_and_duration(records): O(n)
 
 TASK 3:
 
-    * evaluate_phone_type(phone):
-        > space:
-        > time:
-
-    * by_unique_numbers_from_bangalore(acc, x):
-        > space:
-        > time:
-
-    * find_all_numbers_from_bangalore(calls):
-        > space:
-        > time:
-
-    * by_unique_answering_codes(acc, x):
-        > space:
-        > time:
-
-    * find_unique_codes_from_answering_phones(records):
-        > space:
-        > time:
-
-    * print_message_about_people_called_in_bangalore(codes):
-        > space:
-        > time:
-
-    * calculate_percentage(numerator, denominator):
-        > space:
-        > time:
+    * evaluate_phone_type(phone): O(6)
+    * by_unique_numbers_from_bangalore(acc, x): O(5)
+    * find_all_numbers_from_bangalore(calls): O(n)
+    * by_unique_answering_codes(acc, x): O(3)
+    * find_unique_codes_from_answering_phones(records): O(n)
+    * print_message_about_people_called_in_bangalore(codes): O(n+1)
+    * calculate_percentage(numerator, denominator): O(2)
 
 TASK 4:
 
-    * every_unique_number_on_texts(acc, x):
-        > space:
-        > time:
-
-    * by_parsed_phone(phone):
-        > space:
-        > time:
-
-    * by_parsed_phone_led_by_zero(phone):
-        > space:
-        > time:
-
-    * possible_telemarketers_triage(calls, texts):
-        > space:
-        > time:
+    * every_unique_number_on_texts(acc, x): O(4)
+    * by_parsed_phone(phone): O(1)
+    * by_parsed_phone_led_by_zero(phone): O(3)
+    * possible_telemarketers_triage(calls, texts): O(6n+1)

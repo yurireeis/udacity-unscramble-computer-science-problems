@@ -4,19 +4,16 @@ It's ok if you don't understand how to read files.
 """
 from common import texts, calls
 
+
 '''
-order:
-    - space:
-    - time:
+order: O(1)
 '''
 def get_first_and_last_items(items):
     return items[0], items[-1]
 
 
 '''
-order:
-    - space:
-    - time:
+order: O(1)
 '''
 def show_record_message_with_incoming_answering_and_time(record, message):
     print(message.format(*record))
