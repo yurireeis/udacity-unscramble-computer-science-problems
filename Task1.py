@@ -8,6 +8,12 @@ from common import texts, calls
 
 records = texts + calls
 
+
+'''
+order:
+    - space:
+    - time:
+'''
 def evaluate_repeated_numbers(acc, x):
     incoming, answering = x[:2]
     has_incoming = incoming in acc
@@ -17,7 +23,11 @@ def evaluate_repeated_numbers(acc, x):
     if not has_answering: return acc + [answering]
     return acc
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def get_unique_phone_numbers(records):
     return reduce(evaluate_repeated_numbers, records, [])
 

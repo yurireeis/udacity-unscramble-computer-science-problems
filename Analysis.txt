@@ -1,1 +1,77 @@
-to be updated
+TASK 0:
+
+    * get_first_and_last_items(items):
+        > space:
+        > time:
+
+    * show_record_message_with_incoming_answering_and_time(record, message):
+        > space:
+        > time:
+
+TASK 1:
+
+    * evaluate_repeated_numbers(acc, x):
+        > space:
+        > time:
+
+    * get_unique_phone_numbers(records):
+        > space:
+        > time:
+
+TASK 2:
+
+    * evaluate_previous_and_next_calls(acc, x):
+        > space:
+        > time:
+
+    * get_longer_call_phone_number_and_duration(records):
+        > space:
+        > time:
+
+TASK 3:
+
+    * evaluate_phone_type(phone):
+        > space:
+        > time:
+
+    * by_unique_numbers_from_bangalore(acc, x):
+        > space:
+        > time:
+
+    * find_all_numbers_from_bangalore(calls):
+        > space:
+        > time:
+
+    * by_unique_answering_codes(acc, x):
+        > space:
+        > time:
+
+    * find_unique_codes_from_answering_phones(records):
+        > space:
+        > time:
+
+    * print_message_about_people_called_in_bangalore(codes):
+        > space:
+        > time:
+
+    * calculate_percentage(numerator, denominator):
+        > space:
+        > time:
+
+TASK 4:
+
+    * every_unique_number_on_texts(acc, x):
+        > space:
+        > time:
+
+    * by_parsed_phone(phone):
+        > space:
+        > time:
+
+    * by_parsed_phone_led_by_zero(phone):
+        > space:
+        > time:
+
+    * possible_telemarketers_triage(calls, texts):
+        > space:
+        > time:

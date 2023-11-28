@@ -6,7 +6,11 @@ from functools import reduce
 import re
 from common import TYPES, calls
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def evaluate_phone_type(phone):
     fixed_call_match = re.match(r"\((\d+)\)(\d+)", phone)
     if fixed_call_match: return fixed_call_match[1], TYPES['FIXED_PHONE_CALL']
@@ -15,7 +19,11 @@ def evaluate_phone_type(phone):
     if mobile_call_match: return mobile_call_match[1]+mobile_call_match[2], TYPES['TELEMARKETING_PHONE_CALL']
     return '???', 'unknown'
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def by_unique_numbers_from_bangalore(acc, x):
     incoming, answering, incoming_date, duration = x
     if not incoming.startswith('(080)'): return acc
@@ -23,28 +31,48 @@ def by_unique_numbers_from_bangalore(acc, x):
     answering_prefix, answering_phone_type = evaluate_phone_type(answering)
     return [*acc, [incoming, incoming_prefix, incoming_phone_type, answering, answering_prefix, answering_phone_type, incoming_date, duration]]
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def find_all_numbers_from_bangalore(calls):
     return reduce(by_unique_numbers_from_bangalore, calls, [])
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def by_unique_answering_codes(acc, x):
     answering_prefix, answering_phone_type = x[4], x[5]
     if TYPES['FIXED_PHONE_CALL'] is not answering_phone_type or answering_prefix in acc : return acc
     return [*acc, answering_prefix]
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def find_unique_codes_from_answering_phones(records):
     return reduce(by_unique_answering_codes, records, [])
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def print_message_about_people_called_in_bangalore(codes):
     print("The numbers called by people in Bangalore have codes:")
     for code in codes: print("- {}".format(code))
 
-
+'''
+order:
+    - space:
+    - time:
+'''
 def calculate_percentage(numerator, denominator):
-    if numerator is 0 or denominator is 0: return 0
+    if 0 == numerator or 0 == denominator: return 0
     return (numerator / denominator) * 100
 
 
