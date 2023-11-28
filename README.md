@@ -13,3 +13,15 @@ To get the best of compatibility, I would recommend using [virtualenv](https://v
 ```
 virtualenv venv --python=python3.9
 ```
+
+### Activate environment
+
+```
+source venv/bin/activate
+```
+
+### Deactivate environment
+
+```
+deactivate
+```

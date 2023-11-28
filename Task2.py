@@ -12,12 +12,13 @@ order: O(3)
 '''
 def evaluate_previous_and_next_calls(acc, x):
     incoming, answering, incoming_date, duration = x
-    return incoming, duration, datetime.strptime(incoming_date, "%d-%m-%Y %H:%M:%S").strftime("%B, %Y") if not acc or acc[-1] < duration else acc
+    return [incoming, duration, datetime.strptime(incoming_date, "%d-%m-%Y %H:%M:%S").strftime("%B, %Y")] if not acc or int(acc[1]) < int(duration) else acc
+
 
 '''
 order: O(n)
 '''
-def get_longer_call_phone_number_and_duration(records):
+def get_longest_call_phone_number_and_duration(records):
     return reduce(evaluate_previous_and_next_calls, records, None)
 
 
@@ -29,5 +30,5 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
-record = get_longer_call_phone_number_and_duration(calls)
+record = get_longest_call_phone_number_and_duration(calls)
 print("{} spent the longest time, {} seconds, on the phone during {}.".format(*record))
